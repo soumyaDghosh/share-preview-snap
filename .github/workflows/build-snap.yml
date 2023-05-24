@@ -20,15 +20,3 @@ jobs:
         id: snapcraft-build
         with:
           snapcraft-args: "-v"
-      #Upload the snap
-      - uses: actions/upload-artifact@v3
-        with:
-          name: share-preview-snap
-          path: ${{ steps.snapcraft-build.outputs.snap }}
-#      - name: Upload and release Denaro Snap
-#        uses: snapcore/action-publish@v1
-#        env:
-#          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
-#        with:
-#          snap: ${{ steps.snapcraft-build.outputs.snap }}
-#          release: ${{ startsWith(github.ref, 'refs/tags/') && 'candidate' || 'edge'}}
