@@ -38,6 +38,7 @@ parts:
     plugin: meson
     source: https://github.com/rafaelmardojai/share-preview.git
     source-tag: '0.4.0'
+    source-depth: 1
     build-packages:
       - libssl-dev
     build-environment:
