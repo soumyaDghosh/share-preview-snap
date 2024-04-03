@@ -37,7 +37,7 @@ parts:
     after: [ rustup ]
     plugin: meson
     source: https://github.com/rafaelmardojai/share-preview.git
-    source-tag: '0.4.0'
+    source-tag: '0.5.0'
     source-depth: 1
     build-packages:
       - libssl-dev
@@ -64,7 +64,7 @@ parts:
       for snap in "gnome-42-2204" "gtk-common-themes" "core22"; do
       cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$CRAFT_PRIME/{}" \;
       done  
- 
+
 
 slots:
   share-preview:
